@@ -1,0 +1,5 @@
+SELECT my.employee_ID, my.name
+FROM employee_information my
+JOIN last_quarter_bonus b ON b.employee_ID = my.employee_ID
+WHERE my.division LIKE 'HR'
+AND b.bonus >= 5000;

@@ -1,0 +1,6 @@
+SELECT x.roll_number, x.name
+FROM student_information x
+INNER JOIN examination_marks y
+ON x.roll_number = y.roll_number
+GROUP BY y.roll_number
+HAVING SUM(y.subject_one + y.subject_two + y.subject_three) < 100;
